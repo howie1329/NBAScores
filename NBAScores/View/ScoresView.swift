@@ -17,8 +17,12 @@ struct ScoresView: View {
                         HStack{
                             Spacer()
                             VStack{
+                                Spacer()
                                 Text("\(item.HomeTeam) vs. \(item.AwayTeam) ")
+                                Text("\(item.HomeTeamScore ?? 0)  \(item.AwayTeamScore ?? 0)")
+                                Spacer()
                                 Text(item.DateTime ?? "GameTime Not Found")
+                                
                             }
                             Spacer()
                             
