@@ -12,6 +12,7 @@ struct NBAScoresApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(DataModel())
         }
     }
 }
