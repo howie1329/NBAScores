@@ -63,9 +63,8 @@ class DataModel: ObservableObject {
             do{
                 
                 let teamData = try decoder.decode([Team].self, from: data)
-                
+                print(teamData)
                 teamDataArr.append(contentsOf: teamData)
-                print(teamDataArr)
             }catch{
                 print(error)
             }

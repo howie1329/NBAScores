@@ -568,43 +568,5 @@
     "WikipediaWordMarkUrl": null,
     "GlobalTeamID": 20000030,
     "NbaDotComTeamID": 1610612758
-  },
-  {
-    "TeamID": 31,
-    "Key": "GIA",
-    "Active": false,
-    "City": "Team",
-    "Name": "Giannis",
-    "LeagueID": 3,
-    "StadiumID": null,
-    "Conference": null,
-    "Division": null,
-    "PrimaryColor": null,
-    "SecondaryColor": null,
-    "TertiaryColor": null,
-    "QuaternaryColor": null,
-    "WikipediaLogoUrl": null,
-    "WikipediaWordMarkUrl": null,
-    "GlobalTeamID": 20000031,
-    "NbaDotComTeamID": 1610616834
-  },
-  {
-    "TeamID": 32,
-    "Key": "LEB",
-    "Active": false,
-    "City": "Team",
-    "Name": "LeBron",
-    "LeagueID": 3,
-    "StadiumID": null,
-    "Conference": null,
-    "Division": null,
-    "PrimaryColor": null,
-    "SecondaryColor": null,
-    "TertiaryColor": null,
-    "QuaternaryColor": null,
-    "WikipediaLogoUrl": null,
-    "WikipediaWordMarkUrl": null,
-    "GlobalTeamID": 20000032,
-    "NbaDotComTeamID": 1610616834
   }
 ]

@@ -18,6 +18,12 @@ struct ScoresView: View {
                             Spacer()
                             VStack{
                                 Spacer()
+                                AsyncImage(url: URL(string: model.TeamInfo[item.HomeTeamID - 1].WikipediaLogoUrl)) { image in
+                                    image.resizable()
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                                .frame(width: 50, height: 50)
                                 Text("\(item.HomeTeam) vs. \(item.AwayTeam) ")
                                 Text("\(item.HomeTeamScore ?? 0)  \(item.AwayTeamScore ?? 0)")
                                 Spacer()

@@ -16,13 +16,13 @@ struct Games: Decodable{
     var AwayTeamScore:Int?
     var HomeTeamScore:Int?
     var AwayTeamID:Int?
-    var HomeTeamID:Int?
+    var HomeTeamID:Int
     var DateTime:String?
 }
 
 struct Team: Decodable {
     
     var TeamID: Int?
-    var WikipediaLogoUrl: String?
+    var WikipediaLogoUrl: String
     
 }
