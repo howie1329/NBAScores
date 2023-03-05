@@ -26,3 +26,15 @@ struct Team: Decodable {
     var WikipediaLogoUrl: String
     
 }
+
+struct Standings: Decodable {
+    
+    var TeamID: Int
+    var Key: String
+    var City: String
+    var Name: String
+    var Conference: String
+    var Wins: Int
+    var Losses: Int
+    var ConferenceRank: Int
+}

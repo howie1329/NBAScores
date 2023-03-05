@@ -17,6 +17,7 @@
 		F32E947B29B1D41A00E0C96B /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E947A29B1D41A00E0C96B /* Games.swift */; };
 		F32E947D29B1D4E700E0C96B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E947C29B1D4E700E0C96B /* DataModel.swift */; };
 		F32E948029B2E22000E0C96B /* TeamInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = F32E947F29B2E22000E0C96B /* TeamInfo.json */; };
+		F366E91A29B465380002A425 /* StandingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366E91929B465380002A425 /* StandingsRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		F32E947A29B1D41A00E0C96B /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		F32E947C29B1D4E700E0C96B /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		F32E947F29B2E22000E0C96B /* TeamInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TeamInfo.json; sourceTree = "<group>"; };
+		F366E91929B465380002A425 /* StandingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		F32E946029B1D20D00E0C96B /* NBAScores */ = {
 			isa = PBXGroup;
 			children = (
+				F366E91829B465220002A425 /* Components */,
 				F32E947E29B2E1B900E0C96B /* Data */,
 				F32E947129B1D22B00E0C96B /* Model */,
 				F32E947029B1D22500E0C96B /* ViewModel */,
@@ -115,6 +118,14 @@
 				F32E947F29B2E22000E0C96B /* TeamInfo.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		F366E91829B465220002A425 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F366E91929B465380002A425 /* StandingsRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F366E91A29B465380002A425 /* StandingsRow.swift in Sources */,
 				F32E947D29B1D4E700E0C96B /* DataModel.swift in Sources */,
 				F32E947929B1D2AF00E0C96B /* SettingsView.swift in Sources */,
 				F32E947729B1D2A600E0C96B /* StandingsView.swift in Sources */,
@@ -331,6 +343,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,6 +373,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
