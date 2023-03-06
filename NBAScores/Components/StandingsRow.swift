@@ -27,10 +27,6 @@ struct StandingsRow: View {
                 
             }
         }
-        .refreshable(action: {
-            model.getStandings()
-        })
-        .listStyle(.plain)
         
     }
 }

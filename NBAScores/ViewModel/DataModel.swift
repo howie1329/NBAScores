@@ -9,7 +9,9 @@ import Foundation
 
 class DataModel: ObservableObject {
     
-    @Published var ScoreGames:[Games] = [Games]()
+    @Published var ScoreGamesToday:[Games] = [Games]()
+    @Published var ScoreGamesTomorrow:[Games] = [Games]()
+    @Published var ScoreGamesYesterday:[Games] = [Games]()
     @Published var TeamInfo:[Team] = [Team]()
     @Published var StandingsInfo:[Standings] = []
     @Published var EastStandingsInfo:[Standings] = []
@@ -19,7 +21,9 @@ class DataModel: ObservableObject {
     private let APIKEY = "03b394b31ab3466a9d951e0895cd941d"
     
     init(){
-        getScoreGames()
+        getScoreGames(inputDate: "Today")
+        getScoreGames(inputDate: "Yesterday")
+        getScoreGames(inputDate: "Tomorrow")
         getTeamInfo()
         getStandings()
     }
@@ -81,12 +85,32 @@ class DataModel: ObservableObject {
         dataTask.resume()
     }
     
-    
-    func getScoreGames(){
+    func getDate(inputDate:String) -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let today = Date()
-        let todayFormatted = dateFormatter.string(from: today)
+        let day = Calendar.current.startOfDay(for: Date())
+        
+        switch(inputDate){
+        case "Today":
+            let today = day + 0
+            return dateFormatter.string(from: today)
+            
+        case "Yesterday":
+            let yesterday = day - 86400
+            return dateFormatter.string(from: yesterday)
+            
+        case "Tomorrow":
+            let tommrow = day + 86400
+            return dateFormatter.string(from: tommrow)
+        default:
+            let today = day + 0
+            return dateFormatter.string(from: today)
+        }
+        
+    }
+    
+    func getScoreGames(inputDate:String){
+        let todayFormatted = getDate(inputDate: inputDate)
         
         let URLString = "https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/\(todayFormatted)?key=03b394b31ab3466a9d951e0895cd941d"
         
@@ -109,7 +133,18 @@ class DataModel: ObservableObject {
                 } catch {
                     print(error)
                 }
-                self.ScoreGames = gamesDataArr
+                
+                if inputDate == "Today"{
+                    self.ScoreGamesToday = gamesDataArr
+                }
+                else if inputDate == "Yesterday"{
+                    self.ScoreGamesYesterday = gamesDataArr
+                }
+                else if inputDate == "Tomorrow"{
+                    self.ScoreGamesTomorrow = gamesDataArr
+                }
+                
+                
             }
         }
         dataTask.resume()
