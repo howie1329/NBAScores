@@ -16,6 +16,7 @@ class DataModel: ObservableObject {
     @Published var StandingsInfo:[Standings] = []
     @Published var EastStandingsInfo:[Standings] = []
     @Published var WestStandingsInfo:[Standings] = []
+    @Published var SportNews:[News] = []
     
     
     private let APIKEY = "03b394b31ab3466a9d951e0895cd941d"
@@ -26,6 +27,32 @@ class DataModel: ObservableObject {
         getScoreGames(inputDate: "Tomorrow")
         getTeamInfo()
         getStandings()
+        getNews()
+    }
+    
+    func getNews(){
+        let url = URL(string: "https://api.sportsdata.io/v3/nba/scores/json/News?key=03b394b31ab3466a9d951e0895cd941d")
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request) { (data, response, error )in
+            
+            var newArr:[News] = []
+            
+            if error == nil{
+                do{
+                    let decoder = JSONDecoder()
+                    let results = try decoder.decode([News].self, from: data!)
+                    newArr.append(contentsOf: results)
+                }catch{
+                    print(error)
+                }
+            }
+            self.SportNews = newArr
+            print(self.SportNews)
+        }
+        dataTask.resume()
     }
     
     func getStandings(){

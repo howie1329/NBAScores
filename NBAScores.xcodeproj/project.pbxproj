@@ -18,6 +18,8 @@
 		F32E947D29B1D4E700E0C96B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E947C29B1D4E700E0C96B /* DataModel.swift */; };
 		F32E948029B2E22000E0C96B /* TeamInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = F32E947F29B2E22000E0C96B /* TeamInfo.json */; };
 		F340ABCA29B5C53D003DE962 /* ScoresRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340ABC929B5C53D003DE962 /* ScoresRow.swift */; };
+		F340ABCC29B5E5C0003DE962 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340ABCB29B5E5C0003DE962 /* NewsView.swift */; };
+		F340ABCE29B5E718003DE962 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340ABCD29B5E718003DE962 /* NewsDetailView.swift */; };
 		F366E91A29B465380002A425 /* StandingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366E91929B465380002A425 /* StandingsRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		F32E947C29B1D4E700E0C96B /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		F32E947F29B2E22000E0C96B /* TeamInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TeamInfo.json; sourceTree = "<group>"; };
 		F340ABC929B5C53D003DE962 /* ScoresRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresRow.swift; sourceTree = "<group>"; };
+		F340ABCB29B5E5C0003DE962 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		F340ABCD29B5E718003DE962 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 		F366E91929B465380002A425 /* StandingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +98,8 @@
 				F32E947429B1D29500E0C96B /* ScoresView.swift */,
 				F32E947629B1D2A600E0C96B /* StandingsView.swift */,
 				F32E947829B1D2AF00E0C96B /* SettingsView.swift */,
+				F340ABCB29B5E5C0003DE962 /* NewsView.swift */,
+				F340ABCD29B5E718003DE962 /* NewsDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,10 +211,12 @@
 				F366E91A29B465380002A425 /* StandingsRow.swift in Sources */,
 				F32E947D29B1D4E700E0C96B /* DataModel.swift in Sources */,
 				F32E947929B1D2AF00E0C96B /* SettingsView.swift in Sources */,
+				F340ABCC29B5E5C0003DE962 /* NewsView.swift in Sources */,
 				F32E947729B1D2A600E0C96B /* StandingsView.swift in Sources */,
 				F32E946429B1D20D00E0C96B /* ContentView.swift in Sources */,
 				F32E947B29B1D41A00E0C96B /* Games.swift in Sources */,
 				F340ABCA29B5C53D003DE962 /* ScoresRow.swift in Sources */,
+				F340ABCE29B5E718003DE962 /* NewsDetailView.swift in Sources */,
 				F32E947529B1D29500E0C96B /* ScoresView.swift in Sources */,
 				F32E946229B1D20D00E0C96B /* NBAScoresApp.swift in Sources */,
 			);

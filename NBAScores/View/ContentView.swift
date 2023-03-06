@@ -21,6 +21,11 @@ struct ContentView: View {
                     Image(systemName: "list.number")
                     Text("Standings")
                 }
+            NewsView()
+                .tabItem {
+                    Image(systemName: "newspaper")
+                    Text("News")
+                }.badge(model.SportNews.count)
             SettingsView()
                 .tabItem {
                     Image(systemName: "gear")

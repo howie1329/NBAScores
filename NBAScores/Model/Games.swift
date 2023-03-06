@@ -43,3 +43,11 @@ struct Standings: Decodable {
     var Losses: Int
     var ConferenceRank: Int
 }
+
+struct News: Decodable{
+    
+    var TimeAgo:String?
+    var Title:String?
+    var Content:String?
+    var OriginalSource:String?
+}
