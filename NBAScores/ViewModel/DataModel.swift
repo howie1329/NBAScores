@@ -129,7 +129,6 @@ class DataModel: ObservableObject {
                     let decorder = JSONDecoder()
                     let result = try decorder.decode([Games].self, from: data!)
                     for data in result{
-                        let date = data.DateTime
                         let dateFormatter = DateFormatter()
                         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
                         let newDate = dateFormatter.date(from: data.DateTime!)
@@ -143,7 +142,12 @@ class DataModel: ObservableObject {
                         let AwayTeamID = data.AwayTeamID
                         let HomeTeamID = data.AwayTeamID
                         let DateTime = newDate?.formatted(date: .omitted, time: .complete)
-                        gamesDataArr.append(Games(GameID: GameID, Day: Day, AwayTeam: AwayTeam, HomeTeam: HomeTeam,AwayTeamScore: AwayTeamScore, HomeTeamScore: HomeTeamScore, AwayTeamID: AwayTeamID, HomeTeamID: HomeTeamID, DateTime: DateTime))
+                        let Channel = data.Channel
+                        let Quarter = data.Quarter
+                        let Status = data.Status
+                        let TimeRemainingMinutes = data.TimeRemainingMinutes
+                        let TimeRemainingSeconds = data.TimeRemainingSeconds
+                        gamesDataArr.append(Games(GameID: GameID, Day: Day, AwayTeam: AwayTeam, HomeTeam: HomeTeam,AwayTeamScore: AwayTeamScore, HomeTeamScore: HomeTeamScore, AwayTeamID: AwayTeamID, HomeTeamID: HomeTeamID, DateTime: DateTime, Channel: Channel, Quarter: Quarter, Status: Status, TimeRemainingMinutes: TimeRemainingMinutes, TimeRemainingSeconds: TimeRemainingSeconds))
                     }
                     
                 } catch {

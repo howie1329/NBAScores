@@ -18,6 +18,11 @@ struct Games: Decodable{
     var AwayTeamID:Int?
     var HomeTeamID:Int?
     var DateTime:String?
+    var Channel:String?
+    var Quarter:String?
+    var Status:String?
+    var TimeRemainingMinutes:Int?
+    var TimeRemainingSeconds: Int?
 }
 
 struct Team: Decodable {

@@ -16,6 +16,7 @@ struct ScoresRow: View {
                     Spacer()
                     VStack{
                         Spacer()
+                        Text("ON: \(item.Channel ?? "")")
                         HStack{
                             VStack{
                                 Image(item.HomeTeam)
@@ -23,6 +24,12 @@ struct ScoresRow: View {
                                     .frame(width:50,height:50)
                                 Text(item.HomeTeam)
                                 Text("\(item.HomeTeamScore ?? 0)")
+                            }
+                            if item.Quarter != nil{
+                                Text(item.Quarter ?? "")
+                                    .bold()
+                                Text("\(item.TimeRemainingMinutes ?? 0):\(item.TimeRemainingSeconds ?? 0)")
+                                    .bold()
                             }
                             Text("VS.")
                             VStack{
@@ -34,6 +41,7 @@ struct ScoresRow: View {
                             }
                         }
                         Spacer()
+                        Text(item.Status ?? "")
                         Text(item.DateTime ?? "GameTime Not Found")
                         
                     }
