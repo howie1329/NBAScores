@@ -16,7 +16,7 @@ struct Games: Decodable{
     var AwayTeamScore:Int?
     var HomeTeamScore:Int?
     var AwayTeamID:Int?
-    var HomeTeamID:Int
+    var HomeTeamID:Int?
     var DateTime:String?
 }
 
