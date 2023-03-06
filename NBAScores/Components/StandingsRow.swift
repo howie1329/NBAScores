@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StandingsRow: View {
+    @EnvironmentObject var model:DataModel
     var conference:[Standings]
     var body: some View {
         List{
@@ -26,6 +27,9 @@ struct StandingsRow: View {
                 
             }
         }
+        .refreshable(action: {
+            model.getStandings()
+        })
         .listStyle(.plain)
         
     }

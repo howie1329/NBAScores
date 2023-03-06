@@ -84,7 +84,7 @@ class DataModel: ObservableObject {
     
     func getScoreGames(){
         
-        let URLString = "https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/2023-03-03?key=03b394b31ab3466a9d951e0895cd941d"
+        let URLString = "https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/2023-03-05?key=03b394b31ab3466a9d951e0895cd941d"
         
         let url = URL(string: URLString)
         

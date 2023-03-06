@@ -45,6 +45,9 @@ struct ScoresView: View {
                         
                     }
                 }
+                .refreshable {
+                    model.getScoreGames()
+                }
             }
             .navigationTitle("Games")
             .toolbar{
