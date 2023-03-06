@@ -83,8 +83,12 @@ class DataModel: ObservableObject {
     
     
     func getScoreGames(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let today = Date()
+        let todayFormatted = dateFormatter.string(from: today)
         
-        let URLString = "https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/2023-03-05?key=03b394b31ab3466a9d951e0895cd941d"
+        let URLString = "https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/\(todayFormatted)?key=03b394b31ab3466a9d951e0895cd941d"
         
         let url = URL(string: URLString)
         
