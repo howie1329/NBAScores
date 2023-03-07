@@ -50,7 +50,6 @@ class DataModel: ObservableObject {
                 }
             }
             self.SportNews = newArr
-            print(self.SportNews)
         }
         dataTask.resume()
     }
@@ -158,7 +157,7 @@ class DataModel: ObservableObject {
                     for data in result{
                         let dateFormatter = DateFormatter()
                         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-                        let newDate = dateFormatter.date(from: data.DateTime!)
+                        let newDate = dateFormatter.date(from: data.DateTime ?? "")
                         
                         let GameID = data.GameID
                         let Day = data.Day
@@ -174,7 +173,10 @@ class DataModel: ObservableObject {
                         let Status = data.Status
                         let TimeRemainingMinutes = data.TimeRemainingMinutes
                         let TimeRemainingSeconds = data.TimeRemainingSeconds
-                        gamesDataArr.append(Games(GameID: GameID, Day: Day, AwayTeam: AwayTeam, HomeTeam: HomeTeam,AwayTeamScore: AwayTeamScore, HomeTeamScore: HomeTeamScore, AwayTeamID: AwayTeamID, HomeTeamID: HomeTeamID, DateTime: DateTime, Channel: Channel, Quarter: Quarter, Status: Status, TimeRemainingMinutes: TimeRemainingMinutes, TimeRemainingSeconds: TimeRemainingSeconds))
+                        if Status != "Canceled"{
+                            gamesDataArr.append(Games(GameID: GameID, Day: Day, AwayTeam: AwayTeam, HomeTeam: HomeTeam,AwayTeamScore: AwayTeamScore, HomeTeamScore: HomeTeamScore, AwayTeamID: AwayTeamID, HomeTeamID: HomeTeamID, DateTime: DateTime, Channel: Channel, Quarter: Quarter, Status: Status, TimeRemainingMinutes: TimeRemainingMinutes, TimeRemainingSeconds: TimeRemainingSeconds))
+                        }
+                        
                     }
                     
                 } catch {

@@ -25,13 +25,17 @@ struct ScoresRow: View {
                                 Text(item.HomeTeam)
                                 Text("\(item.HomeTeamScore ?? 0)")
                             }
-                            if item.Quarter != nil{
-                                Text(item.Quarter ?? "")
-                                    .bold()
-                                Text("\(item.TimeRemainingMinutes ?? 0):\(item.TimeRemainingSeconds ?? 0)")
-                                    .bold()
+                            VStack{
+                                if item.Quarter != nil{
+                                    VStack{
+                                        Text(item.Quarter ?? "")
+                                            .bold()
+                                        Text("\(item.TimeRemainingMinutes ?? 0):\(item.TimeRemainingSeconds ?? 0)")
+                                            .bold()
+                                    }
+                                }
+                                Text("VS.")
                             }
-                            Text("VS.")
                             VStack{
                                 Image(item.AwayTeam)
                                     .resizable()
