@@ -23,13 +23,13 @@ struct ScoresView: View {
                 }
                 .pickerStyle(.segmented)
                 if viewDate == "Today"{
-                    ScoresRow(dayModelArr: model.ScoreGamesToday)
+                    NewScoresRow(dayModelArr: model.ScoreGamesToday)
                 }
                 else if viewDate == "Yesterday"{
-                    ScoresRow(dayModelArr: model.ScoreGamesYesterday)
+                    NewScoresRow(dayModelArr: model.ScoreGamesYesterday)
                 }
                 else if viewDate == "Tomorrow"{
-                    ScoresRow(dayModelArr: model.ScoreGamesTomorrow)
+                    NewScoresRow(dayModelArr: model.ScoreGamesTomorrow)
                 }
             }
             .navigationTitle("Games")

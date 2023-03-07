@@ -20,6 +20,8 @@
 		F340ABCA29B5C53D003DE962 /* ScoresRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340ABC929B5C53D003DE962 /* ScoresRow.swift */; };
 		F340ABCC29B5E5C0003DE962 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340ABCB29B5E5C0003DE962 /* NewsView.swift */; };
 		F340ABCE29B5E718003DE962 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340ABCD29B5E718003DE962 /* NewsDetailView.swift */; };
+		F340ABD029B6FC78003DE962 /* QuarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340ABCF29B6FC78003DE962 /* QuarterView.swift */; };
+		F340ABD229B70185003DE962 /* NewScoresRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F340ABD129B70185003DE962 /* NewScoresRow.swift */; };
 		F366E91A29B465380002A425 /* StandingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F366E91929B465380002A425 /* StandingsRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		F340ABC929B5C53D003DE962 /* ScoresRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresRow.swift; sourceTree = "<group>"; };
 		F340ABCB29B5E5C0003DE962 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		F340ABCD29B5E718003DE962 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
+		F340ABCF29B6FC78003DE962 /* QuarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuarterView.swift; sourceTree = "<group>"; };
+		F340ABD129B70185003DE962 /* NewScoresRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewScoresRow.swift; sourceTree = "<group>"; };
 		F366E91929B465380002A425 /* StandingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +137,8 @@
 			children = (
 				F366E91929B465380002A425 /* StandingsRow.swift */,
 				F340ABC929B5C53D003DE962 /* ScoresRow.swift */,
+				F340ABD129B70185003DE962 /* NewScoresRow.swift */,
+				F340ABCF29B6FC78003DE962 /* QuarterView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -210,11 +216,13 @@
 			files = (
 				F366E91A29B465380002A425 /* StandingsRow.swift in Sources */,
 				F32E947D29B1D4E700E0C96B /* DataModel.swift in Sources */,
+				F340ABD029B6FC78003DE962 /* QuarterView.swift in Sources */,
 				F32E947929B1D2AF00E0C96B /* SettingsView.swift in Sources */,
 				F340ABCC29B5E5C0003DE962 /* NewsView.swift in Sources */,
 				F32E947729B1D2A600E0C96B /* StandingsView.swift in Sources */,
 				F32E946429B1D20D00E0C96B /* ContentView.swift in Sources */,
 				F32E947B29B1D41A00E0C96B /* Games.swift in Sources */,
+				F340ABD229B70185003DE962 /* NewScoresRow.swift in Sources */,
 				F340ABCA29B5C53D003DE962 /* ScoresRow.swift in Sources */,
 				F340ABCE29B5E718003DE962 /* NewsDetailView.swift in Sources */,
 				F32E947529B1D29500E0C96B /* ScoresView.swift in Sources */,

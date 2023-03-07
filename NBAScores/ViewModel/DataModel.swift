@@ -17,6 +17,7 @@ class DataModel: ObservableObject {
     @Published var EastStandingsInfo:[Standings] = []
     @Published var WestStandingsInfo:[Standings] = []
     @Published var SportNews:[News] = []
+    @Published var Quarters:[Quarters] = []
     
     
     private let APIKEY = "03b394b31ab3466a9d951e0895cd941d"
@@ -133,6 +134,39 @@ class DataModel: ObservableObject {
             return dateFormatter.string(from: today)
         }
         
+    }
+    
+    func getQuarters(gameID:Int){
+        
+        let URLString = "https://api.sportsdata.io/v3/nba/stats/json/BoxScore/\(gameID)?key=03b394b31ab3466a9d951e0895cd941d"
+        
+        let url = URL(string: URLString)
+        
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        
+        let session = URLSession.shared
+        
+        var quarterArr:[Quarters] = []
+        
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
+            if error == nil{
+                do{
+                    
+                    let decorder = JSONDecoder()
+                    let result = try decorder.decode(Quarter.self, from: data!)
+                    
+                    quarterArr.append(contentsOf: result.Quarters)
+                    
+                }catch{
+                    print(error)
+                }
+                
+                self.Quarters = quarterArr
+            }
+            
+        }
+        dataTask.resume()
     }
     
     func getScoreGames(inputDate:String){

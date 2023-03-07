@@ -51,3 +51,15 @@ struct News: Decodable{
     var Content:String?
     var OriginalSource:String?
 }
+
+struct Quarter: Decodable{
+    
+    var Quarters: [Quarters]
+}
+
+struct Quarters:Decodable{
+    
+    var Number: Int
+    var AwayScore: Int
+    var HomeScore: Int
+}
