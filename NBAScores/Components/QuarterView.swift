@@ -18,9 +18,9 @@ struct QuarterView: View {
                     Text("Q #:")
                         .bold()
                     Divider()
-                    Text(homeTeam)
+                    Text(model.Quarters[0].HomeTeam)
                     Divider()
-                    Text(awayTeam)
+                    Text(model.Quarters[0].AwayTeam)
                 }
                 ForEach(model.Quarters, id:\.Number){item in
                     VStack{
