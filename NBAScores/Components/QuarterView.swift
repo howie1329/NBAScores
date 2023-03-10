@@ -43,7 +43,7 @@ struct QuarterView: View {
 
 struct QuarterView_Previews: PreviewProvider {
     static var previews: some View {
-        QuarterView(homeTeam: "Team1", awayTeam: "Team2")
+        QuarterView()
             .environmentObject(DataModel())
     }
 }

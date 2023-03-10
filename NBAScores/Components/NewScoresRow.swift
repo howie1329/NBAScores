@@ -17,6 +17,8 @@ struct NewScoresRow: View {
             ForEach(dayModelArr, id: \.GameID){item in
                 Button {
                     showBox.toggle()
+                    model.homeTeam = item.HomeTeam
+                    model.awayTeam = item.AwayTeam
                     model.getQuarters(gameID: item.GameID)
                 } label: {
                     HStack{
@@ -61,7 +63,7 @@ struct NewScoresRow: View {
                     }
                 }
                 .sheet(isPresented: $showBox) {
-                    QuarterView(homeTeam: item.HomeTeam, awayTeam: item.AwayTeam)
+                    QuarterView()
                         .presentationDetents([.medium], selection: $presentationDents)
                 }
 
