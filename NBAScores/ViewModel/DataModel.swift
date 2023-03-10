@@ -19,6 +19,9 @@ class DataModel: ObservableObject {
     @Published var SportNews:[News] = []
     @Published var Quarters:[Quarters] = []
     
+    @Published var homeTeam:String = ""
+    @Published var awayTeam:String = ""
+    
     
     private let APIKEY = "03b394b31ab3466a9d951e0895cd941d"
     

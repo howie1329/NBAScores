@@ -9,8 +9,6 @@ import SwiftUI
 
 struct QuarterView: View {
     @EnvironmentObject var model:DataModel
-    var homeTeam:String
-    var awayTeam:String
     var body: some View {
         NavigationView{
             HStack(alignment:.center){
@@ -18,9 +16,9 @@ struct QuarterView: View {
                     Text("Q #:")
                         .bold()
                     Divider()
-                    Text(homeTeam)
+                    Text(model.homeTeam)
                     Divider()
-                    Text(awayTeam)
+                    Text(model.awayTeam)
                 }
                 ForEach(model.Quarters, id:\.Number){item in
                     VStack{
