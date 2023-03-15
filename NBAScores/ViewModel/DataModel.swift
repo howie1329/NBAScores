@@ -157,6 +157,7 @@ class DataModel: ObservableObject {
                 do{
                     
                     let decorder = JSONDecoder()
+                    print("Data: \(data)")
                     let result = try decorder.decode(Quarter.self, from: data!)
                     
                     quarterArr.append(contentsOf: result.Quarters)

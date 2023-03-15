@@ -59,9 +59,9 @@ struct Quarter: Decodable{
 
 struct Quarters:Decodable{
     
-    var AwayTeam:String
-    var HomeTeam:String
-    var Number: Int
-    var AwayScore: Int
-    var HomeScore: Int
+    var AwayTeam:String?
+    var HomeTeam:String?
+    var Number: Int?
+    var AwayScore: Int?
+    var HomeScore: Int?
 }

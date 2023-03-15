@@ -22,14 +22,12 @@ struct QuarterView: View {
                 }
                 ForEach(model.Quarters, id:\.Number){item in
                     VStack{
-                        Text("\(item.Number)")
+                        Text("\(item.Number ?? 0)")
                             .bold()
                         Divider()
-                        Text(item.HomeTeam)
-                        Text("\(item.HomeScore)")
+                        Text("\(item.HomeScore ?? 0)")
                         Divider()
-                        Text(item.AwayTeam)
-                        Text("\(item.AwayScore)")
+                        Text("\(item.AwayScore ?? 0)")
                         Divider()
                         
                     }
